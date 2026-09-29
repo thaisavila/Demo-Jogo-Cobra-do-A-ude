@@ -28,27 +28,35 @@ Godot Engine.
 ## Estrutura do projeto
 A estrutura pode variar conforme a organização final dos arquivos, mas a ideia principal é:
 
-text
 Snake-Game/
+
 ├── project.godot
+
 ├── scenes/
+
 ├── scripts/
+
 ├── imgs/
+
 └── README.md
 Os nomes das pastas e cenas podem ser ajustados para corresponder à estrutura atual do projeto.
 
 ## Principais elementos
 - Player
+
 O Player é o personagem controlado pelo usuário. Ele possui uma sprite, área de colisão e um script responsável pela movimentação.
 
 - Snake
+
 A Snake é um inimigo representado por um CharacterBody2D. Sua estrutura inclui a sprite, um CollisionShape2D e uma Area2D para auxiliar na detecção de contato com o Player.
 A cobra calcula continuamente a direção entre sua posição e a posição do Player, movimentando-se pelo mapa para persegui-lo.
 
 - Goiabas
+
 As goiabas funcionam como itens coletáveis. Quando o Player entra em contato com uma delas, o item é coletado, o  progresso do jogador é atualizado e uma nova goiaba aparece em um lugar aleatório no mapa.
 
 - Mapa
+
 O mapa reúne os principais elementos da fase, como Player, Snake, goiabas, limites de movimentação, contador e demais componentes da interface.
 
 ## Como executar

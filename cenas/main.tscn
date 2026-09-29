@@ -1,0 +1,180 @@
+[gd_scene format=3 uid="uid://crn46rctmjgg2"]
+
+[ext_resource type="Script" uid="uid://dm7un0xmr6oa8" path="res://scripts/main.gd" id="1_v1d1r"]
+[ext_resource type="Texture2D" uid="uid://njsh2k8fyxsy" path="res://imgs/background.jpg" id="2_1yycb"]
+[ext_resource type="Script" uid="uid://dady80fnyc0ta" path="res://scripts/player.gd" id="3_v1d1r"]
+[ext_resource type="Texture2D" uid="uid://d1ubfdwen4g1t" path="res://imgs/player/player1.png" id="4_vhipe"]
+[ext_resource type="Script" uid="uid://ugqleo48ygyr" path="res://scripts/guava.gd" id="5_v1d1r"]
+[ext_resource type="Texture2D" uid="uid://bnmqrup04j3gi" path="res://imgs/guava.png" id="6_g6klm"]
+[ext_resource type="Script" uid="uid://dsabp0nwgcip6" path="res://scripts/snake.gd" id="7_v1d1r"]
+[ext_resource type="Texture2D" uid="uid://cuftegu08w1r3" path="res://imgs/snake.png" id="8_ocpn0"]
+[ext_resource type="Texture2D" uid="uid://cwyadlajwg5a2" path="res://imgs/barco.png" id="9_1yycb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ds1vb"]
+size = Vector2(24, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m728n"]
+size = Vector2(33, 58)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ia20i"]
+size = Vector2(36, 35)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2kvrk"]
+size = Vector2(52, 76)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eisly"]
+size = Vector2(87, 106)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ds1vb"]
+radius = 52.46904
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m728n"]
+radius = 19.723083
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ds1vb"]
+radius = 45.0
+height = 90.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ia20i"]
+radius = 44.181442
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2kvrk"]
+radius = 27.073973
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_eisly"]
+radius = 13.152946
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u1qag"]
+radius = 23.194826
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7o01j"]
+radius = 14.866069
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c5gi0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u1qag"]
+size = Vector2(105.5, 20)
+
+[node name="map" type="Node2D" unique_id=1837112997]
+script = ExtResource("1_v1d1r")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=982178156]
+position = Vector2(581, 333)
+scale = Vector2(0.19416669, 0.22366667)
+texture = ExtResource("2_1yycb")
+
+[node name="score" type="Label" parent="." unique_id=607996741]
+offset_left = 17.0
+offset_top = 5.0
+offset_right = 350.00006
+offset_bottom = 93.0
+theme_override_font_sizes/font_size = 64
+text = "Goiabas: 0"
+
+[node name="time" type="Label" parent="." unique_id=1612892816]
+offset_left = 969.0
+offset_top = 3.0
+offset_right = 1133.0
+offset_bottom = 91.0
+theme_override_font_sizes/font_size = 64
+text = "00:00"
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1926890225]
+position = Vector2(700, 500)
+script = ExtResource("3_v1d1r")
+
+[node name="Player" type="Sprite2D" parent="Player" unique_id=940993716]
+scale = Vector2(0.39285713, 0.2983539)
+texture = ExtResource("4_vhipe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1616273120]
+position = Vector2(-6, 3)
+shape = SubResource("RectangleShape2D_ds1vb")
+
+[node name="Area2D" type="Area2D" parent="Player" unique_id=901537746]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Area2D" unique_id=1654243375]
+position = Vector2(-4, 3)
+shape = SubResource("RectangleShape2D_m728n")
+
+[node name="Guava" type="Area2D" parent="." unique_id=836211867]
+script = ExtResource("5_v1d1r")
+
+[node name="Guava" type="Sprite2D" parent="Guava" unique_id=1701190600]
+position = Vector2(260.50003, 212.5)
+scale = Vector2(0.14247338, 0.10805084)
+texture = ExtResource("6_g6klm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Guava" unique_id=1904530834]
+position = Vector2(259, 218.5)
+shape = SubResource("RectangleShape2D_ia20i")
+
+[node name="Snake" type="CharacterBody2D" parent="." unique_id=1914861287]
+position = Vector2(900, 350)
+script = ExtResource("7_v1d1r")
+
+[node name="Snake" type="Sprite2D" parent="Snake" unique_id=268696147]
+scale = Vector2(0.32195845, 0.28085643)
+texture = ExtResource("8_ocpn0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Snake" unique_id=355012466]
+position = Vector2(6, 3)
+shape = SubResource("RectangleShape2D_2kvrk")
+
+[node name="Area2D" type="Area2D" parent="Snake" unique_id=949427133]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Snake/Area2D" unique_id=1286907523]
+position = Vector2(9, 0)
+shape = SubResource("RectangleShape2D_eisly")
+
+[node name="Pedra" type="StaticBody2D" parent="." unique_id=1333219705]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pedra" unique_id=1658669490]
+position = Vector2(189, 502)
+shape = SubResource("CircleShape2D_ds1vb")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Pedra" unique_id=1220426808]
+position = Vector2(457, 564)
+shape = SubResource("CircleShape2D_m728n")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Pedra" unique_id=924884138]
+position = Vector2(237, 173)
+shape = SubResource("CapsuleShape2D_ds1vb")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pedra" unique_id=49740600]
+position = Vector2(394, 29)
+shape = SubResource("CircleShape2D_ia20i")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Pedra" unique_id=1609132228]
+position = Vector2(226, 368)
+shape = SubResource("CircleShape2D_2kvrk")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Pedra" unique_id=1391264362]
+position = Vector2(269, 384)
+shape = SubResource("CircleShape2D_eisly")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Pedra" unique_id=2141481689]
+position = Vector2(469, 62)
+shape = SubResource("CircleShape2D_u1qag")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Pedra" unique_id=2001504897]
+position = Vector2(642, 63)
+shape = SubResource("CircleShape2D_7o01j")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Pedra" unique_id=449865605]
+position = Vector2(694, 37)
+shape = SubResource("CircleShape2D_c5gi0")
+
+[node name="Barco" type="StaticBody2D" parent="." unique_id=2012615645]
+position = Vector2(697, 36)
+
+[node name="Barco2" type="Sprite2D" parent="Barco" unique_id=599481261]
+position = Vector2(251, 413)
+scale = Vector2(0.44549763, 0.53174603)
+texture = ExtResource("9_1yycb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barco" unique_id=1289127105]
+position = Vector2(249.25, 410)
+shape = SubResource("RectangleShape2D_u1qag")
+
+[connection signal="body_entered" from="Snake/Area2D" to="." method="_on_area_2d_body_entered"]

@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://x3ni7cxjy1jk"]
+
+[ext_resource type="Texture2D" uid="uid://bm6mpxu7j1g6" path="res://imgs/background_menu.jpg" id="1_3wl7d"]
+[ext_resource type="Script" uid="uid://da4eh88ttna5d" path="res://cenas/perdeu.gd" id="1_t2bck"]
+[ext_resource type="Texture2D" uid="uid://bvdr1ix6qynay" path="res://imgs/msg_perdeu.png" id="2_7xxkt"]
+[ext_resource type="Texture2D" uid="uid://bqcx85tbc2que" path="res://imgs/jogar_novamente.png" id="3_t2bck"]
+
+[node name="perdeu" type="Node2D" unique_id=700690241]
+script = ExtResource("1_t2bck")
+
+[node name="BackgroundMenu" type="Sprite2D" parent="." unique_id=1309829129]
+position = Vector2(578.625, 329.5)
+scale = Vector2(0.29489642, 0.35405406)
+texture = ExtResource("1_3wl7d")
+
+[node name="MsgPerdeu" type="Sprite2D" parent="." unique_id=1375343359]
+position = Vector2(564, 323)
+texture = ExtResource("2_7xxkt")
+
+[node name="Button" type="Button" parent="." unique_id=2046141569]
+offset_left = 462.0
+offset_top = 445.0
+offset_right = 662.0
+offset_bottom = 518.0
+
+[node name="JogarNovamente" type="Sprite2D" parent="Button" unique_id=1303207419]
+position = Vector2(100, 159)
+scale = Vector2(0.13535762, 0.15297885)
+texture = ExtResource("3_t2bck")
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

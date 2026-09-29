@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://6rsq5eb86xon"]
+
+[ext_resource type="Script" uid="uid://xxwr7jqtwffb" path="res://cenas/ganhou.gd" id="1_82yts"]
+[ext_resource type="Texture2D" uid="uid://bm6mpxu7j1g6" path="res://imgs/background_menu.jpg" id="1_wndrk"]
+[ext_resource type="Texture2D" uid="uid://p4ra7sbijyqb" path="res://imgs/msg_ganhou.png" id="2_bvyus"]
+[ext_resource type="Texture2D" uid="uid://bqcx85tbc2que" path="res://imgs/jogar_novamente.png" id="3_82yts"]
+
+[node name="ganhou" type="Node2D" unique_id=1219048416]
+script = ExtResource("1_82yts")
+
+[node name="BackgroundMenu" type="Sprite2D" parent="." unique_id=1547437514]
+position = Vector2(575.49994, 327.75003)
+scale = Vector2(0.2929138, 0.34945944)
+texture = ExtResource("1_wndrk")
+
+[node name="MsgGanhou" type="Sprite2D" parent="." unique_id=561909447]
+position = Vector2(550, 330)
+texture = ExtResource("2_bvyus")
+
+[node name="Button" type="Button" parent="." unique_id=73151967]
+offset_left = 438.0
+offset_top = 469.0
+offset_right = 654.0
+offset_bottom = 547.0
+
+[node name="JogarNovamente" type="Sprite2D" parent="Button" unique_id=744815642]
+position = Vector2(109, 170)
+scale = Vector2(0.15213454, 0.16430959)
+texture = ExtResource("3_82yts")
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

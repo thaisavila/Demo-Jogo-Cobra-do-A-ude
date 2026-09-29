@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://b4k3q4dfn6ish"]
+
+[ext_resource type="Texture2D" uid="uid://bm6mpxu7j1g6" path="res://imgs/background_menu.jpg" id="1_mmoso"]
+[ext_resource type="Script" uid="uid://c3gdsdhp5ea21" path="res://cenas/menu.gd" id="1_nxpqr"]
+[ext_resource type="Texture2D" uid="uid://cuftegu08w1r3" path="res://imgs/snake.png" id="2_qvcyk"]
+[ext_resource type="Texture2D" uid="uid://d1ubfdwen4g1t" path="res://imgs/player/player1.png" id="3_nxpqr"]
+[ext_resource type="Texture2D" uid="uid://rw2or3oqthpt" path="res://imgs/Cobra do açude (1).png" id="4_qcnrj"]
+[ext_resource type="Texture2D" uid="uid://bg1ran7ag2hqr" path="res://imgs/jogar.png" id="5_qvcyk"]
+
+[node name="menu" type="Node2D" unique_id=1003495536]
+script = ExtResource("1_nxpqr")
+
+[node name="BackgroundMenu" type="Sprite2D" parent="." unique_id=2005661059]
+position = Vector2(582.5, 331.24997)
+scale = Vector2(0.29956508, 0.36513513)
+texture = ExtResource("1_mmoso")
+
+[node name="Snake" type="Sprite2D" parent="." unique_id=9978577]
+position = Vector2(1040, 455.00003)
+scale = Vector2(0.59792286, 0.5377834)
+texture = ExtResource("2_qvcyk")
+
+[node name="Player1" type="Sprite2D" parent="." unique_id=1122301667]
+position = Vector2(81, 546)
+scale = Vector2(0.87142855, 0.82510287)
+texture = ExtResource("3_nxpqr")
+
+[node name="CobraDoAçude(1)" type="Sprite2D" parent="." unique_id=2083691595]
+position = Vector2(568, 171.99998)
+scale = Vector2(0.76375, 0.81875)
+texture = ExtResource("4_qcnrj")
+
+[node name="Button" type="Button" parent="." unique_id=174066886]
+offset_left = 417.0
+offset_top = 391.0
+offset_right = 709.0
+offset_bottom = 478.0
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+
+[node name="Jogar" type="Sprite2D" parent="Button" unique_id=21947917]
+position = Vector2(148, 51.999992)
+scale = Vector2(0.40875, 0.388125)
+texture = ExtResource("5_qvcyk")
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

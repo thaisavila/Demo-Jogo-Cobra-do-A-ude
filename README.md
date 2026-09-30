@@ -1,8 +1,7 @@
 # Jogo da Cobra do açude
 Um jogo 2D desenvolvido na Godot Engine, no qual o jogador deve controlar o personagem, coletar 10 goiabas enquanto foge da cobra do açude.
 
-## Link para jogar:
-https://thaisavila.itch.io/cobra-do-acude
+Link para jogar: https://thaisavila.itch.io/cobra-do-acude
 
 ## Sobre o projeto
 Este projeto foi criado como uma experiência prática de desenvolvimento de jogos 2D. Durante o desenvolvimento, foram trabalhados conceitos como movimentação de personagem, colisões, detecção por áreas, inimigos com perseguição, itens coletáveis, condições de vitória e derrota e organização de cenas e scripts na Godot.
